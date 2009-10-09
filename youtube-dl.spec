@@ -1,13 +1,13 @@
 Name:           youtube-dl
-Version:        2008.01.24
+Version:        2009.09.13
 Release:        2%{?dist}
 Summary:        Small command-line program to download videos from YouTube
 Summary(pl):    Tekstowy program do pobierania filmów z youtube.com
 Group:          Applications/Multimedia
-License:        MIT
-URL:            http://www.arrakis.es/~rggi3/youtube-dl/
-Source0:        http://www.arrakis.es/~rggi3/youtube-dl/youtube-dl
-Source1:        http://www.arrakis.es/~rggi3/youtube-dl/index.html
+License:        Public Domain
+URL:            http://bitbucket.org/rg3/youtube-dl
+Source0:        http://bitbucket.org/rg3/youtube-dl/raw/%{version}/youtube-dl
+Source1:        http://bitbucket.org/rg3/youtube-dl/wiki/Home
 BuildRoot:      %{_tmppath}/%{name}-%{version}-%{release}-root-%(%{__id_u} -n)
 BuildArch:      noarch
 Requires:       python >= 2.4
@@ -20,7 +20,7 @@ youtube-dl to mały tekstowy program służący do pobierania filmów z
 youtube.com.
 
 %prep
-cp %{SOURCE1} .
+install -p -m0644 %{SOURCE1} index.html
 
 %build
 #nothing to build
@@ -39,6 +39,16 @@ rm -rf $RPM_BUILD_ROOT
 %doc index.html
 
 %changelog
+* Fri Oct 09 2009 Rafał Psota <rafalzaq@gmail.com> - 2009.09.13-2
+- Small fix in %%prep
+
+* Sun Sep 27 2009 Rafał Psota <rafalzaq@gmail.com> - 2009.09.13-1
+- Update to 2009.09.13
+- License change to Public Domain
+
+* Mon Jul 27 2009 Fedora Release Engineering <rel-eng@lists.fedoraproject.org> - 2008.01.24-3
+- Rebuilt for https://fedoraproject.org/wiki/Fedora_12_Mass_Rebuild
+
 * Wed Feb 25 2009 Fedora Release Engineering <rel-eng@lists.fedoraproject.org> - 2008.01.24-2
 - Rebuilt for https://fedoraproject.org/wiki/Fedora_11_Mass_Rebuild
 
