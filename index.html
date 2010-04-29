@@ -1,165 +1,501 @@
-<!DOCTYPE html 
-     PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
-     "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
-<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.1//EN" 
+	"http://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en">
 <head>
-	<meta http-equiv="Content-type" content="text/html; charset=UTF-8" />
-	<title>youtube-dl: Download videos from YouTube.com</title>
-	<style type="text/css"><!--
-		body {
-			font-family: sans-serif;
-			font-size: small;
-		}
-		h1 {
-			text-align: center;
-			text-decoration: underline;
-			color: #006699;
-		}
-		h2 {
-			color: #006699;
-		}
-		p {
-			text-align: justify;
-			margin-left: 5%;
-			margin-right: 5%;
-		}
-		ul {
-			margin-left: 5%;
-			margin-right: 5%;
-			list-style-type: square;
-		}
-		li {
-			margin-bottom: 0.5ex;
-		}
-		#copyright {
-			font-size: x-small;
-			text-align: center;
-		}
-		--></style>
+	<title>
+	rg3 / youtube-dl / wiki / Home &mdash; bitbucket.org
+</title>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+	<meta name="description" content="Mercurial hosting - we're here to serve." />
+	<meta name="keywords" content="mercurial,hg,hosting,bitbucket,rg3,youtube-dl,is,a,small,command-line,program,for,downloading,videos,from,YouTube.com.,wiki" />
+	<link rel="stylesheet" type="text/css" href="http://bitbucket.org/m/css/layout.css?12985842" />
+	<link rel="stylesheet" type="text/css" href="http://bitbucket.org/m/css/print.css?12985842" media="print" />
+	<link rel="search" type="application/opensearchdescription+xml" href="/opensearch.xml" title="Bitbucket" />
+	<link rel="icon" href="http://bitbucket.org/m/img/logo_new.png" type="image/png"/>
+	<script type="text/javascript" src="http://bitbucket.org/m/js/lib/bundle.180909Sep.js?2152820"></script>
+	
+	<script type="text/javascript">
+		$(document).ready(function() {
+			Dropdown.init();
+			$(".tooltip").tipsy({gravity:'s'});
+		});
+	</script>
+	<noscript>
+		<style type="text/css">
+			.dropdown-container-text .dropdown {
+				position: static !important;
+			}
+		</style>
+	</noscript>
+
+	<!--[if lt IE 7]>
+	<style type="text/css">
+	body {
+		behavior: url(http://bitbucket.org/m/css/csshover.htc);
+	}
+	
+	#issues-issue pre {
+		white-space: normal !important;
+	}
+	
+	.changeset-description {
+		white-space: normal !important;
+	}
+	</style>
+	<script type="text/javascript"> 
+		$(document).ready(function(){ 
+			$('#header-wrapper').pngFix();
+			$('#sourcelist').pngFix();
+			$('.promo-signup-screenshot').pngFix();
+		}); 
+	</script>
+	<![endif]-->
+	
+	<link rel="stylesheet" href="http://bitbucket.org/m/css/highlight/trac.css" type="text/css" />
+	<script type="text/javascript">
+		$(document).ready(function() {
+			$('#wiki table:not(.highlighttable)').addClass('wikitable');
+			$('#wiki table.wikitable tr:even').addClass('crow2');
+		});
+	</script>
+
+	
+	<link href="/rg3/youtube-dl/rss/" rel="alternate nofollow" type="application/rss+xml" title="RSS Feed for youtube-dl" />
+
 </head>
-<body>
-<h1>youtube-dl: Download videos from YouTube.com</h1>
+<body class="">
+	<div id="main-wrapper">
+		<div id="header-wrapper">
+			<div id="header">
+				<a href="/"><img src="http://bitbucket.org/m/img/logo_myriad.png" alt="Bitbucket" id="header-wrapper-logo" /></a>
+				
+					<div id="header-nav">
+						<div id="header-nav-login-forms">
+							<form action="/account/signin/" method="post">
+								<fieldset>
+									<input id="id_username_header" type="text" class="required login" name="username" value="username" maxlength="30" onfocus="if(this.value=='username'){this.value='';}; $(this).addClass('normaltext');" /> <input id="id_password_header" type="password" class="required login" name="password" value="password" maxlength="128" onfocus="if(this.value=='password'){this.value='';}; $(this).addClass('normaltext');" /> <input type="submit" name="blogin" value="&raquo;" style="display:none;" />
+									<input type="hidden" name="next" value="/rg3/youtube-dl/wiki/Home"/>
+								</fieldset>
+							</form>
+							<form name="fopenid" action="/account/signin/" method="post">
+								<fieldset>
+									<input id="id_openid_url" type="text" class="required openid" name="openid_url" maxlength="255" value="your OpenID URL" onfocus="if(this.value=='your OpenID URL'){this.value='';}; $(this).addClass('normaltext');" /> <input name="bsignin" type="submit" value="&raquo;" style="display: none;" />
+									<input type="hidden" name="next" value="/rg3/youtube-dl/wiki/Home" />
+								</fieldset>
+							</form>
+						</div>
+						
+						<ul class="right">
+							<li><a href="/">Home</a></li>
+							<li><a href="/plans/"><b>Plans &amp; Signup</b></a></li>
+							<li><a href="/repo/all/">Repositories</a></li>
+							<li><a href="/news/">News</a></li>
+							<li><a href="/help/">Help</a></li>
+							<li><a href="/account/signin/">Login</a></li>
+						</ul>
+					</div>
+				
+			</div>
+		</div>
+		<div id="content-wrapper">
+			
+			
+			
 
-<h2>What is it?</h2>
+			
+			
+			
+	
+	
 
-<p><em>youtube-dl</em> is a small command-line program to download videos
-from YouTube.com. It requires the <a href="http://www.python.org/">Python
-interpreter</a>, version 2.4 or later, and it's not platform specific.
-It should work in your Unix box, in Windows or in Mac OS X. The latest version
-is <strong>2008.01.24</strong>. It's licensed under the MIT License, which
-means you can modify it, redistribute it or use it however you like
-complying with a few simple conditions.</p>
 
-<p>I'll try to keep it updated if YouTube.com changes the way you access
-their videos. After all, it's a simple and short program. However, I can't
-guarantee anything. If you detect it stops working, check for new versions
-and/or inform me about the problem, indicating the program version you
-are using. If the program stops working and I can't solve the problem but
-you have a solution, I'd like to know it. If that happens and you feel you
-can maintain the program yourself, tell me. My contact information is
-at <a href="http://freshmeat.net/~rg3/">freshmeat.net</a>.</p>
 
-<p>Thanks for all the feedback received so far. I'm glad people find my
-program useful.</p>
 
-<p><strong>Related projects</strong>:
-<a href="../metacafe-dl/">metacafe-dl</a>
-<a href="../pornotube-dl/">pornotube-dl</a>
-</p>
 
-<h2>Usage instructions</h2>
+	<script type="text/javascript" src="http://bitbucket.org/m/js/lib/jquery.cookie.js"></script> <!--REMOVE WHEN NEWER BUNDLE THAN 030309Mar -->
+	<script type="text/javascript">
+		var date = new Date();
+		date.setTime(date.getTime() + (365 * 24 * 60 * 60 * 1000));
+		var cookieoptions = { path: '/', expires: date };
+		
+		$(document).ready(function(){
+			$('#toggle-repo-content').click(function(){
+				$('#repo-desc-cloneinfo').toggle('fast');
+				$('#repo-menu').toggle();
+				$('#repo-menu-links-mini').toggle(100);
+				$('.repo-desc-description').toggle('fast');
+				var avatar_new_width = ($('.repo-avatar').width() == 35) ? 16 : 35;
+				$('.repo-avatar').animate({ width: avatar_new_width }, 250);
+				
+				if ($.cookie('toggle_status') == 'hide') {
+					$.cookie('toggle_status', 'show', cookieoptions);
+					$(this).css('background-image','url(http://bitbucket.org/m/img/repo-toggle-up.png)');
+				} else {
+					$.cookie('toggle_status', 'hide', cookieoptions);
+					$(this).css('background-image','url(http://bitbucket.org/m/img/repo-toggle-down.png)');
+				}
+			});
+			
+			if ($.cookie('toggle_status') == 'hide') {
+				$('#toggle-repo-content').css('background-image','url(http://bitbucket.org/m/img/repo-toggle-down.png)');
+				$('#repo-desc-cloneinfo').hide();
+				$('#repo-menu').hide();
+				$('#repo-menu-links-mini').show();
+				$('.repo-desc-description').hide();
+				$('.repo-avatar').css({ width: '16px' });
+			} else {
+				$('#toggle-repo-content').css('background-image','url(http://bitbucket.org/m/img/repo-toggle-up.png)');
+				$('#repo-desc-cloneinfo').show();
+				$('#repo-menu').show();
+				$('#repo-menu-links-mini').hide();
+				$('.repo-desc-description').show();
+				$('.repo-avatar').css({ width: '35px' });
+			}
+		});
+	</script>
 
-<p>In Windows, once you have installed the Python interpreter, save the
-program with the <em>.py</em> extension and put it somewhere in the PATH.
-Try to follow the
-<a href="http://rg03.wordpress.com/youtube-dl-under-windows-xp/">guide to
-install youtube-dl under Windows XP</a>.</p>
 
-<p>In Unix, download it, give it execution permission and copy it to one
-of the PATH directories (typically, <em>/usr/local/bin</em>).</p>
+<div id="tabs">
+	<ul class="ui-tabs-nav">
+		<li>
+			<a href="/rg3/youtube-dl/overview/"><span>Overview</span></a>
+		</li>
 
-<p>After that, you should be able to call it from the command line as
-<em>youtube-dl</em> or <em>youtube-dl.py</em>. I will use <em>youtube-dl</em>
-in the following examples. Usage instructions are easy. Use <em>youtube-dl</em>
-followed by a video URL or identifier. Example: <em>youtube-dl
-"http://www.youtube.com/watch?v=foobar"</em>. The video will be saved
-to the file <em>foobar.flv</em> in that example. As YouTube.com
-videos are in Flash Video format, their extension should be <em>flv</em>.
-In Linux and other unices, video players using a recent version of
-<em>ffmpeg</em> can play them. That includes MPlayer, VLC, etc. Those two
-work under Windows and other platforms, but you could also get a
-specific FLV player of your taste.</p>
+		<li>
+			<a href="/rg3/youtube-dl/downloads/"><span>Downloads (0)</span></a>
+		</li>
+		
+		
 
-<p>If you try to run the program and you receive an error message containing the
-keyword <em>SyntaxError</em> near the end, it means your Python interpreter
-is too old.</p>
+		<li>
+			
+				<a href="/rg3/youtube-dl/src/"><span>Source</span></a>			
+			
+		</li>
+		
+		<li>
+			<a href="/rg3/youtube-dl/changesets/"><span>Changesets</span></a>
+		</li>
 
-<h2>More usage tips</h2>
+		
+			
+				<li class="ui-tabs-nav-issues ui-tabs-selected">
+					<a href="/rg3/youtube-dl/wiki/"><span>Wiki</span></a>
+				</li>
+			
+		
 
-<ul>
+		
+			
+				<li class="ui-tabs-nav-issues">
+					<a href="/rg3/youtube-dl/issues/?status=new&amp;status=open"><span>Issues (4) &raquo;</span></a>
+					<ul>
+						<li><a href="/rg3/youtube-dl/issues/?status=new">New issues</a></li>
+						<li><a href="/rg3/youtube-dl/issues/?status=new&amp;status=open">Open issues</a></li>
+						<li><a href="/rg3/youtube-dl/issues/?status=resolved&amp;status=invalid&amp;status=duplicate">Closed issues</a></li>
+					
+						<li><a href="/rg3/youtube-dl/issues/">All issues</a></li>
+						<li><a href="/rg3/youtube-dl/issues/query/">Advanced query</a></li>
+						<li><a href="/rg3/youtube-dl/issues/new/">Create new issue</a></li>
+					</ul>
+				</li>
+			
+		
+				
+		
+			
+		
+		
+		<li class="tabs-right tabs-far-right">
+			<a href="/rg3/youtube-dl/descendants/"><span>Forks/Queues (3)</span></a>
+		</li>
+		
+		<li class="tabs-right">
+			<a href="/rg3/youtube-dl/zealots/"><span>Followers (21)</span></a>
+		</li>
+	</ul>
+</div>
 
-<li>You can change the file name of the video using the -o option, like in
-<em>youtube-dl -o vid.flv "http://www.youtube.com/watch?v=foobar"</em>.</li>
+<div id="repo-menu">
+		<div id="repo-menu-links">
+			<ul>
+				<li>
+					<a href="/rg3/youtube-dl/rss/" class="noborder repo-menu-rss" title="RSS Feed for youtube-dl">RSS</a>
+				</li>
+				<li>
+					<a href="/rg3/youtube-dl/atom/" class="noborder repo-menu-atom" title="Atom Feed for youtube-dl">Atom</a>
+				</li>
+				
+				<li>
+					<a href="/rg3/youtube-dl/pull/" class="link-request-pull">
+						pull request
+					</a>
+				</li>
+				
+				<li><a href="/rg3/youtube-dl/fork/" class="link-fork">fork</a></li>
+				
+					<li><a href="/rg3/youtube-dl/hack/" class="link-hack">patch queue</a></li>
+				
+				<li>
+					
+						<a rel="nofollow" href="/rg3/youtube-dl/follow/" class="link-follow">follow</a>
+					
+				</li>
+				<li><a class="link-download">get source &raquo;</a>
 
-<li>Some videos require an account to be downloaded, mostly because they're
-flagged as mature content. You can pass the program a username and password
-for a YouTube.com account with the -u and -p options, like <em>youtube-dl
--u myusername -p mypassword "http://www.youtube.com/watch?v=foobar"</em>.</li>
+					<ul>
+						
+						
+							<li><a rel="nofollow" href="/rg3/youtube-dl/get/805624cfc278.zip" class="zip">zip</a></li>
+							<li><a rel="nofollow" href="/rg3/youtube-dl/get/805624cfc278.gz" class="compressed">gz</a></li>
+							<li><a rel="nofollow" href="/rg3/youtube-dl/get/805624cfc278.bz2" class="compressed">bz2</a></li>
+						
+						
+					</ul>
+				</li>
+			</ul>
+		</div>
+		
+		
+		<div id="repo-menu-branches-tags">
+ 			<ul>
+				<li class="icon-branches">
+					branches &raquo;
+					
+					<ul>
+					
+						<li><a href="/rg3/youtube-dl/src/805624cfc278/">default</a></li>
+					
+					</ul>
+					
+				</li>
+				<li class="icon-tags">
+					tags &raquo;
+					
+					<ul>
+					
+						<li><a href="/rg3/youtube-dl/src/805624cfc278/">tip</a></li>
+					
+						<li><a href="/rg3/youtube-dl/src/6947c04fb1b4/">2009.09.13</a></li>
+					
+						<li><a href="/rg3/youtube-dl/src/4597eb63af5c/">2009.09.08</a></li>
+					
+						<li><a href="/rg3/youtube-dl/src/df8b882d8b39/">2009.08.08</a></li>
+					
+						<li><a href="/rg3/youtube-dl/src/2793d3270ff9/">2009.06.29</a></li>
+					
+						<li><a href="/rg3/youtube-dl/src/cfc3202eb7b6/">2009.05.30</a></li>
+					
+						<li><a href="/rg3/youtube-dl/src/4bc5ac772e8a/">2009.05.25</a></li>
+					
+						<li><a href="/rg3/youtube-dl/src/3f498fb56291/">2009.05.23</a></li>
+					
+						<li><a href="/rg3/youtube-dl/src/31198e942e00/">2009.05.13</a></li>
+					
+						<li><a href="/rg3/youtube-dl/src/95b216d50f8a/">2009.05.11</a></li>
+					
+						<li><a href="/rg3/youtube-dl/src/c42582904adf/">2009.04.25</a></li>
+					
+						<li><a href="/rg3/youtube-dl/src/468b207ea6ee/">2009.04.06</a></li>
+					
+						<li><a href="/rg3/youtube-dl/src/1dd3c78e417e/">2009.03.28</a></li>
+					
+						<li><a href="/rg3/youtube-dl/src/8dc1b312077f/">2009.03.03</a></li>
+					
+						<li><a href="/rg3/youtube-dl/src/ef03a5f5f333/">2009.02.07</a></li>
+					
+						<li><a href="/rg3/youtube-dl/src/ee7b97092712/">2009.01.31</a></li>
+					
+						<li><a href="/rg3/youtube-dl/src/c72929f1680d/">2008.11.01</a></li>
+					
+						<li><a href="/rg3/youtube-dl/src/846c13fabe78/">2008.10.16</a></li>
+					
+						<li><a href="/rg3/youtube-dl/src/9636c1843c6f/">2008.09.20</a></li>
+					
+						<li><a href="/rg3/youtube-dl/src/385afd90ca13/">2008.08.09</a></li>
+					
+						<li><a href="/rg3/youtube-dl/src/afa03d33275e/">2008.07.22</a></li>
+					
+					</ul>
+				</li>
+			</ul>
+		</div>
+		
+		
+		<div class="cb"></div>
+	</div>
+	<div id="repo-desc" class="layout-box">
+		
+		
+		<div id="repo-menu-links-mini" class="right">
+			<ul>
+				<li>
+					<a href="/rg3/youtube-dl/rss/" class="noborder repo-menu-rss" title="RSS Feed for youtube-dl"></a>
+				</li>
+				<li>
+					<a href="/rg3/youtube-dl/atom/" class="noborder repo-menu-atom" title="Atom Feed for youtube-dl"></a>
+				</li>
+				
+				<li>
+					<a href="/rg3/youtube-dl/pull/" class="tooltip noborder link-request-pull" title="Pull request"></a>
+				</li>
+				
+				<li><a href="/rg3/youtube-dl/fork/" class="tooltip noborder link-fork" title="Fork"></a></li>
+				
+					<li><a href="/rg3/youtube-dl/hack/" class="tooltip noborder link-hack" title="Patch queue"></a></li>
+				
+				<li><a class="tooltip noborder link-download" title="Get source"></a>
 
-<li>The account data can also be read from the user .netrc file by indicating
-the -n or --netrc option. The machine name is <em>youtube</em> in that
-case.</li>
+					<ul>
+						
+						
+							<li><a rel="nofollow" href="/rg3/youtube-dl/get/805624cfc278.zip" class="zip">zip</a></li>
+							<li><a rel="nofollow" href="/rg3/youtube-dl/get/805624cfc278.gz" class="compressed">gz</a></li>
+							<li><a rel="nofollow" href="/rg3/youtube-dl/get/805624cfc278.bz2" class="compressed">bz2</a></li>
+						
+						
+					</ul>
+				</li>
+			</ul>
+		</div>
+		
+		<h3>
+			<a href="/rg3/">rg3</a> / 
+			<a href="/rg3/youtube-dl/wiki/Home">youtube-dl</a>
+			 <span>(<a href="http://bitbucket.org/rg3/youtube-dl/wiki/">http://bitbucket.org/rg3/youtube-dl/wiki/</a>)</span>
+			
+		</h3>
+		
+		
+		
+		
+		
+		<p class="repo-desc-description">youtube-dl is a small command-line program for downloading videos from <a href="http://YouTube.com" rel="nofollow">YouTube.com</a>.</p>
+		
+		<div id="repo-desc-cloneinfo">Clone this repository (size: 199.5 KB): <a href="http://bitbucket.org/rg3/youtube-dl/" onclick="$('#clone-url-ssh').hide();$('#clone-url-https').toggle();return(false);"><small>HTTPS</small></a> / <a href="ssh://hg@bitbucket.org/rg3/youtube-dl/" onclick="$('#clone-url-https').hide();$('#clone-url-ssh').toggle();return(false);"><small>SSH</small></a><br/>
+		<pre id="clone-url-https">$ hg clone <a href="http://bitbucket.org/rg3/youtube-dl/">http://bitbucket.org/rg3/youtube-dl/</a></pre>
+		
+		<pre id="clone-url-ssh" style="display:none;">$ hg clone <a href="ssh://hg@bitbucket.org/rg3/youtube-dl/">ssh://hg@bitbucket.org/rg3/youtube-dl/</a></pre></div>
+		
+		<div class="cb"></div>
+		<a href="#" id="toggle-repo-content"></a>
+	</div>
 
-<li>The <em>simulate mode</em> (activated with -s or --simulate) can be used
-to just get the real video URL and use it with a download manager if you
-prefer that option.</li>
 
-<li>The <em>quiet mode</em> (activated with -q or --quiet) can be used to
-supress all output messages. This allows, in systems featuring /dev/stdout
-and other similar special files, outputting the video data to standard output
-in order to pipe it to another program without interferences.</li>
+			
+			
 
-<li>The program can be told to simply print the final video URL to standard
-output using the -g or --get-url option.</li>
+	
 
-<li>Combined with the above option, the -2 or --title-too option tells the
-program to print the video title too.</li>
+<div class="global-divider-header issues-nav">	
+	<div id="wiki-nav-links">
+		<span class="right">
+			<nobr>
+				<small>hg clone http://bitbucket.org/rg3/youtube-dl/wiki/</small>
+			</nobr>
+		</span>
+		
+		
+		<b><a href="/rg3/youtube-dl/wiki/Home" class="wiki-icon-home">Home</a></b>
+		
+		<a href="/rg3/youtube-dl/wiki/history/Home" class="wiki-icon-history">History</a>
+		<a href="http://www.wikicreole.org/wiki/Creole1.0" class="wiki-icon-markup">Wiki Markup</a>
+	</div>
+	<div class="cb"></div>
+</div>
 
-<li>The default filename is <em>video_id.flv</em>. But you can also use the
-video title in the filename with the -t or --title option.</li>
+	
 
-<li><em>youtube-dl</em> honors the <em>http_proxy</em> environment variable
-if you want to use a proxy. Set it to something like
-<em>http://proxy.example.com:8080</em>, and do not leave the <em>http://</em>
-prefix out.</li>
+	<div id="wiki">
+		<p>﻿</p>
+<h1 id="youtube-dl-download-videos-from-youtubecom">youtube-dl: Download videos from YouTube.com</h1>
+<p>(and more...)</p>
+<h2 id="what-is-it">What is it?</h2>
+<p><em>youtube-dl</em> is a small command-line program to download videos from YouTube.com. It requires the <a href="http://www.python.org/">Python interpreter</a>, version 2.x (x being at least 4), and it's not platform specific. It should work in your Unix box, in Windows or in Mac OS X. The latest version is <strong>2009.09.13</strong>. It's released to the public domain, which means you can modify it, redistribute it or use it however you like.</p>
+<p>I'll try to keep it updated if YouTube.com changes the way you access their videos. After all, it's a simple and short program. However, I can't guarantee anything. If you detect it stops working, check for new versions and/or inform me about the problem, indicating the program version you are using. If the program stops working and I can't solve the problem but you have a solution, I'd like to know it. If that happens and you feel you can maintain the program yourself, tell me. My contact information is at <a href="http://rg03.wordpress.com/contact-me/">rg03.wordpress.com</a>.</p>
+<p>Thanks for all the feedback received so far. I'm glad people find my program useful.</p>
+<h2 id="usage-instructions">Usage instructions</h2>
+<p>In Windows, once you have installed the Python interpreter, save the program with the <em>.py</em> extension and put it somewhere in the PATH. Try to follow the <a href="/rg3/youtube-dl/wiki/youtube-dl_under_Windows_XP">guide to install youtube-dl under Windows XP</a>.</p>
+<p>In Unix, download it, give it execution permission and copy it to one of the PATH directories (typically, <em>/usr/local/bin</em>).</p>
+<p>After that, you should be able to call it from the command line as <em>youtube-dl</em> or <em>youtube-dl.py</em>. I will use <em>youtube-dl</em> in the following examples. Usage instructions are easy. Use <em>youtube-dl</em> followed by a video URL or identifier. Example: <em>youtube-dl "<code>http://www.youtube.com/watch?v=foobar</code>"</em>. The video will be saved to the file <em>foobar.flv</em> in that example. As YouTube.com videos are in Flash Video format, their extension should be <em>flv</em>. In Linux and other unices, video players using a recent version of <em>ffmpeg</em> can play them. That includes MPlayer, VLC, etc. Those two work under Windows and other platforms, but you could also get a specific FLV player of your taste.</p>
+<p>If you try to run the program and you receive an error message containing the keyword <em>SyntaxError</em> near the end, it means your Python interpreter is too old.</p>
+<h2 id="more-usage-tips">More usage tips</h2>
+<ul><li>You can change the file name of the video using the -o option, like in <em>youtube-dl -o vid.flv "<code>http://www.youtube.com/watch?v=foobar</code>"</em>. Read the Output template section for more details on this.
+</li><li>Some videos require an account to be downloaded, mostly because they're flagged as mature content. You can pass the program a username and password for a YouTube.com account with the -u and -p options, like <em>youtube-dl -u myusername -p mypassword "<code>http://www.youtube.com/watch?v=foobar</code>"</em>.
+</li><li>The account data can also be read from the user .netrc file by indicating the -n or --netrc option. The machine name is youtube in that case.
+</li><li>The simulate mode (activated with -s or --simulate) can be used to just get the real video URL and use it with a download manager if you prefer that option.
+</li><li>The quiet mode (activated with -q or --quiet) can be used to supress all output messages. This allows, in systems featuring <em>/dev/stdout</em> and other similar special files, outputting the video data to standard output in order to pipe it to another program without interferences.
+</li><li>The program can be told to simply print the final video URL to standard output using the -g or --get-url option.
+</li><li>In a similar line, the -e or --get-title option tells the program to print the video title.
+</li><li>The default filename is video_id.flv. But you can also use the video title in the filename with the -t or --title option, or preserve the literal title in the filename with the -l or --literal option.
+</li><li>You can make the program append <em>&amp;fmt=something</em> to the URL by using the -f or --format option. This makes it possible to download high quality versions of the videos when available.
+</li><li>The -b or --best-quality option can be used to download the highest available quality version of any given video.
+</li><li>The -m or --mobile-version option is an alias for -f 17.
+</li><li>The -d or --high-def option is an alias for -f 22.
+</li><li>Normally, the program will stop on the first error, but you can tell it to attempt to download every video with the -i or --ignore-errors option.
+</li><li>The -a or --batch-file option lets you specify a file to read URLs from. The file must contain one URL per line.
+</li><li>The program can be told not to overwrite existing files using the -w or --no-overwrites option.
+</li><li>It can be told to attempt to continue interrupted downloads with the -c or --continue option.
+</li><li>For YouTube, you can also use the URL of a playlist, and it will download all the videos in that playlist.
+</li><li>For YouTube, you can also use the special word ytsearch to download search results. With ytsearch it will download the first search result. With ytsearchN, where N is a number, it will download the first N results. With ytsearchall it will download every result for that search. In most systems you'll need to use quotes for multiple words. Example: <em>youtube-dl "ytsearch3:cute kittens"</em>.
+</li><li><em>youtube-dl</em> honors the http_proxy environment variable if you want to use a proxy. Set it to something like <em><code>http://proxy.example.com:8080</code></em>, and do not leave the <em><code>http://</code></em> prefix out.
+</li><li>You can get the program version by calling it as <em>youtube-dl -v</em> or <em>youtube-dl --version</em>.
+</li><li>For usage instructions, use <em>youtube-dl -h</em> or <em>youtube-dl --help</em>.
+</li><li>You can cancel the program at any time pressing Ctrl+C. It may print some error lines saying something about <em>KeyboardInterrupt</em>. That's ok.
+</li></ul>
+<h2 id="download-it">Download it</h2>
+<p>Note that if you directly click on these hyperlinks, your web browser will most likely display the program contents. It's usually better to right-click on it and choose the appropriate option, normally called <em>Save Target As</em> or <em>Save Link As</em>, depending on the web browser you are using.</p>
+<h3 id="httpbitbucketorgrg3youtube-dlraw20090913youtube-dl20090913"><a href="http://bitbucket.org/rg3/youtube-dl/raw/2009.09.13/youtube-dl">2009.09.13</a></h3>
+<ul><li><strong>MD5</strong>: db4e6acf6876f5df4896724be0084980
+</li><li><strong>SHA1</strong>: c76eca4489d625b76955d2eda76be19960bd9f3b
+</li><li><strong>SHA256</strong>: d6ca29457644d3fca8915f50470d50a2599100365bfdc94784868d7884a98afe
+</li></ul>
+<h3 id="output-template">Output template</h3>
+<p>The -o option allows users to indicate a template for the output file names. The basic usage is not to set any template arguments when downloading a single file, like in <em>youtube-dl -o funny_video.flv "<code>http://some/video</code>"</em>. However, it may contain special sequences that will be replaced when downloading each video. The special sequences have the format <strong>%(NAME)s</strong>. To clarify, that's a percent symbol followed by a name in parenthesis, followed by a lowercase S. Allowed names are:</p>
+<ul><li><em>id</em>: The sequence will be replaced by the video identifier.
+</li><li><em>url</em>: The sequence will be replaced by the video URL.
+</li><li><em>uploader</em>: The sequence will be replaced by the nickname of the person who uploaded the video.
+</li><li><em>title</em>: The sequence will be replaced by the literal video title.
+</li><li><em>stitle</em>: The sequence will be replaced by a simplified video title, restricted to alphanumeric characters and dashes.
+</li><li><em>ext</em>: The sequence will be replaced by the appropriate extension (like <em>flv</em> or <em>mp4</em>).
+</li><li><em>epoch</em>: The sequence will be replaced by the Unix epoch when creating the file.
+</li></ul>
+<p>As you may have guessed, the default template is <em>%(id)s.%(ext)s</em>. When some command line options are used, it's replaced by other templates like <em>%(title)s-%(id)s.%(ext)s</em>. You can specify your own.</p>
+<h2 id="authors">Authors</h2>
+<ul><li>Ricardo Garcia Gonzalez: program core, YouTube.com InfoExtractor, metacafe.com InfoExtractor and YouTube playlist InfoExtractor.
+</li><li>Danny Colligan: YouTube search InfoExtractor, ideas and patches.
+</li><li>Many other people contributing patches, code, ideas and kind messages. Too many to be listed here. You know who you are. Thank you very much.
+</li></ul>
+<p>Copyright © 2006-2009 Ricardo Garcia Gonzalez</p>
 
-<li>You can get the program version by calling it as <em>youtube-dl
--v</em> or <em>youtube-dl --version</em>.</li>
+		
+		
+	</div>
 
-<li>For usage instructions, use <em>youtube-dl -h</em> or <em>youtube-dl
---help.</em></li>
 
-<li>You can cancel the program at any time pressing Ctrl+C. It may print
-some error lines saying something about <em>KeyboardInterrupt</em>.
-That's ok.</li>
-
-</ul>
-
-<h2>Download it</h2>
-
-<p>Note that if you directly click on these hyperlinks, your web browser will
-most likely display the program contents. It's usually better to
-right-click on it and choose the appropriate option, normally called <em>Save
-Target As</em> or <em>Save Link As</em>, depending on the web browser you
-are using.</p>
-
-<p><a href="youtube-dl">2008.01.24</a></p>
-<ul>
-        <li><strong>MD5</strong>: 48a7df743398bbfdf2710962000886cb</li>
-        <li><strong>SHA1</strong>: 05ab118a157dbeedf7430d8445963c0340188c04</li>
-        <li><strong>SHA256</strong>: 6e98f3abfa79a038e578d45441bb6675ac6d4880bae4b801d5125e364e60d5c5</li>
-</ul>
-
-<p id="copyright">Copyright &copy; 2006-2007 Ricardo Garcia Gonzalez</p>
+			<div class="cb"></div>
+		</div>
+		<div class="cb footer-placeholder"></div>
+	</div>
+	<div id="footer-wrapper">
+		<div id="footer">
+			<a href="/site/terms/">TOS</a> | <a href="/site/privacy/">Privacy Policy</a> | <a href="http://blog.bitbucket.org/">Blog</a> | <a href="http://bitbucket.org/jespern/bitbucket/issues/new/">Report Bug</a> | <a href="http://groups.google.com/group/bitbucket-users">Discuss</a> | <a href="http://avantlumiere.com/">&copy; 2008-2009</a>
+			| We run <small><b>
+				<a href="http://www.djangoproject.com/">Django 1.1.0</a> / 
+				<a href="http://bitbucket.org/jespern/django-piston/">Piston 0.2.3rc1</a> / 
+				<a href="http://www.selenic.com/mercurial/">Hg 1.3.1</a> / 
+				<a href="http://www.python.org">Python 2.5.2</a> /
+				r2687
+			</b></small>
+		</div>
+	</div>
+	<script type="text/javascript">
+	var gaJsHost = (("https:" == document.location.protocol) ? "https://ssl." : "http://www.");
+	document.write(unescape("%3Cscript src='" + gaJsHost + "google-analytics.com/ga.js' type='text/javascript'%3E%3C/script%3E"));
+	</script>
+	<script type="text/javascript">
+	var pt = _gat._getTracker("UA-2456069-3");
+	pt._trackPageview();
+	</script>
 </body>
 </html>
