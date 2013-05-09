@@ -1,9 +1,5 @@
 Name:           youtube-dl
-<<<<<<< HEAD
-Version:        2013.04.18
-=======
 Version:        2013.05.07
->>>>>>> master
 Release:        1%{?dist}
 Summary:        Small command-line program to download videos from YouTube
 Group:          Applications/Multimedia
@@ -49,11 +45,6 @@ rm -rf $RPM_BUILD_ROOT
 %{_sysconfdir}/bash_completion.d/%{name}
 
 %changelog
-<<<<<<< HEAD
-* Thu Apr 18 2013 Till Maas <opensource@till.name> - 2013.04.18-1
-- Update to new release
-
-=======
 * Wed May 08 2013 Christopher Meng <rpm@cicku.me> - 2013.05.07-1
 - Update to new release
 
@@ -63,7 +54,6 @@ rm -rf $RPM_BUILD_ROOT
 * Fri Feb 15 2013 Fedora Release Engineering <rel-eng@lists.fedoraproject.org> - 2013.01.13-2
 - Rebuilt for https://fedoraproject.org/wiki/Fedora_19_Mass_Rebuild
 
->>>>>>> master
 * Tue Jan 15 2013 Till Maas <opensource@till.name> - 2013.01.13-1
 - Update to new release
 
