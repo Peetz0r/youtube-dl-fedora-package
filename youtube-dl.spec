@@ -13,6 +13,8 @@ BuildRequires:  zip
 # Used to generate manpage
 BuildRequires:  pandoc
 BuildRequires:  python
+#Tests
+#BuildRequires:  python-nose
 Requires:       python
 
 %description
@@ -33,7 +35,11 @@ mkdir -p %{buildroot}%{_sysconfdir}
 install -p -m644 %{S:1} %{buildroot}%{_sysconfdir}
 
 %check
+<<<<<<< HEAD
 make test
+=======
+#make test
+>>>>>>> master
 
 %files
 %doc LICENSE
