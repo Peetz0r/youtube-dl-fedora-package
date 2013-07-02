@@ -35,11 +35,7 @@ mkdir -p %{buildroot}%{_sysconfdir}
 install -p -m644 %{S:1} %{buildroot}%{_sysconfdir}
 
 %check
-<<<<<<< HEAD
-make test
-=======
 #make test
->>>>>>> master
 
 %files
 %doc LICENSE
