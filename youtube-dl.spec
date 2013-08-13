@@ -1,21 +1,20 @@
 Name:           youtube-dl
-Version:        2013.08.02
+Version:        2013.08.09
 Release:        1%{?dist}
 Summary:        A small command-line program to download online videos
 License:        Public Domain
 URL:            http://youtube-dl.org
 Source0:        http://youtube-dl.org/downloads/%{version}/%{name}-%{version}.tar.gz
 Source1:        %{name}.conf
-
-BuildArch:      noarch
 # Used in Makefile to generate youtube-dl
 BuildRequires:  zip
 # Used to generate manpage
-BuildRequires:  pandoc
+# BuildRequires:  pandoc
 BuildRequires:  python
 #Tests
 #BuildRequires:  python-nose
 Requires:       python
+BuildArch:      noarch
 
 %description
 Small command-line program to download videos from YouTube and other sites.
@@ -45,6 +44,9 @@ install -p -m644 %{S:1} %{buildroot}%{_sysconfdir}
 %{_sysconfdir}/bash_completion.d/%{name}
 
 %changelog
+* Tue Aug 13 2013 Christopher Meng <rpm@cicku.me> - 2013.08.09-1
+- Update to new release.
+
 * Sat Aug 03 2013 Christopher Meng <rpm@cicku.me> - 2013.08.02-1
 - Update to new release.
 
