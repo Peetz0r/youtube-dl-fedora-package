@@ -1,17 +1,15 @@
 Name:           youtube-dl
-Version:        2013.08.23
+Version:        2013.08.27
 Release:        1%{?dist}
 Summary:        A small command-line program to download online videos
 License:        Public Domain
-URL:            http://youtube-dl.org
-Source0:        http://youtube-dl.org/downloads/%{version}/%{name}-%{version}.tar.gz
+URL:            https://yt-dl.org
+Source0:        https://yt-dl.org/downloads/%{version}/%{name}-%{version}.tar.gz
 Source1:        %{name}.conf
-# Used in Makefile to generate youtube-dl
-BuildRequires:  zip
 # Used to generate manpage
 # BuildRequires:  pandoc
 BuildRequires:  python
-#Tests
+# Tests failed because of no connection in Koji.
 #BuildRequires:  python-nose
 Requires:       python
 BuildArch:      noarch
@@ -26,12 +24,12 @@ Small command-line program to download videos from YouTube and other sites.
 make %{?_smp_mflags}
 
 %install
-make install DESTDIR="%{buildroot}" \
-    PREFIX="%{_prefix}" \
-    MANDIR="%{_mandir}" \
-    PYTHON="%{_bindir}/python"
+make install DESTDIR=%{buildroot} \
+             PREFIX=%{_prefix} \
+             MANDIR=%{_mandir} \
+             PYTHON=%{_bindir}/python
 mkdir -p %{buildroot}%{_sysconfdir}
-install -p -m644 %{S:1} %{buildroot}%{_sysconfdir}
+install -pm644 %{S:1} %{buildroot}%{_sysconfdir}
 
 %check
 #make test
@@ -44,6 +42,9 @@ install -p -m644 %{S:1} %{buildroot}%{_sysconfdir}
 %{_sysconfdir}/bash_completion.d/%{name}
 
 %changelog
+* Tue Aug 27 2013 Christopher Meng <rpm@cicku.me> - 2013.08.27-1
+- Update to new release.
+
 * Sat Aug 24 2013 Christopher Meng <rpm@cicku.me> - 2013.08.23-1
 - Update to new release.
 
