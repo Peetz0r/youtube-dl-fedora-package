@@ -1,5 +1,5 @@
 Name:           youtube-dl
-Version:        2013.09.20.1
+Version:        2013.09.24.2
 Release:        1%{?dist}
 Summary:        A small command-line program to download online videos
 License:        Public Domain
@@ -42,7 +42,10 @@ install -pm644 %{S:1} %{buildroot}%{_sysconfdir}
 %{_sysconfdir}/bash_completion.d/%{name}
 
 %changelog
-* Mon Sep 16 2013 Christopher Meng <rpm@cicku.me> - 2013.09.20.1-1
+* Wed Sep 25 2013 Christopher Meng <rpm@cicku.me> - 2013.09.24.2-1
+- Update to new release(BZ#1011845).
+
+* Sat Sep 21 2013 Christopher Meng <rpm@cicku.me> - 2013.09.20.1-1
 - Update to new release(BZ#1009593).
 
 * Mon Sep 16 2013 Christopher Meng <rpm@cicku.me> - 2013.09.16-1
