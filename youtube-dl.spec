@@ -1,5 +1,5 @@
 Name:           youtube-dl
-Version:        2013.12.04
+Version:        2013.12.09.4
 Release:        1%{?dist}
 Summary:        A small command-line program to download online videos
 License:        Public Domain
@@ -40,138 +40,141 @@ install -pm644 %{S:1} %{buildroot}%{_sysconfdir}
 %{_sysconfdir}/bash_completion.d/%{name}
 
 %changelog
+* Tue Dec 03 2013 Christopher Meng <rpm@cicku.me> - 2013.12.09.4-1
+- Update to 2013.12.09.4
+
 * Tue Dec 03 2013 Christopher Meng <rpm@cicku.me> - 2013.12.04-1
-- Update to new release.
+- Update to 2013.12.04
 
 * Tue Dec 03 2013 Christopher Meng <rpm@cicku.me> - 2013.12.02-1
-- Update to new release.
+- Update to 2013.12.02
 
 * Fri Nov 29 2013 Christopher Meng <rpm@cicku.me> - 2013.11.29-1
-- Update to new release(BZ#1035738).
+- Update to 2013.11.29(BZ#1035738)
 
 * Tue Nov 26 2013 Christopher Meng <rpm@cicku.me> - 2013.11.25.3-1
-- Update to new release(BZ#1034138).
+- Update to 2013.11.25.3(BZ#1034138)
 
 * Sun Nov 24 2013 Christopher Meng <rpm@cicku.me> - 2013.11.22.2-1
-- Update to new release.
+- Update to 2013.11.22
 
 * Thu Nov 21 2013 Christopher Meng <rpm@cicku.me> - 2013.11.20-1
-- Update to new release.
+- Update to 2013.11.20
 
 * Wed Nov 20 2013 Christopher Meng <rpm@cicku.me> - 2013.11.19-1
-- Update to new release.
+- Update to 2013.11.19
 
 * Mon Nov 18 2013 Christopher Meng <rpm@cicku.me> - 2013.11.18.1-1
-- Update to new release.
+- Update to 2013.11.18.1
 
 * Fri Nov 15 2013 Christopher Meng <rpm@cicku.me> - 2013.11.15-1
-- Update to new release.
+- Update to 2013.11.15
 
 * Thu Nov 14 2013 Christopher Meng <rpm@cicku.me> - 2013.11.13-1
-- Update to new release.
+- Update to 2013.11.13
 
 * Tue Nov 12 2013 Christopher Meng <rpm@cicku.me> - 2013.11.11-1
-- Update to new release.
+- Update to 2013.11.11
 
 * Fri Nov 08 2013 Christopher Meng <rpm@cicku.me> - 2013.11.07-1
-- Update to new release(BZ#1027822).
+- Update to 2013.11.07(BZ#1027822)
 
 * Thu Oct 31 2013 Christopher Meng <rpm@cicku.me> - 2013.11.02-1
-- Update to new release(BZ#1026034).
+- Update to 2013.11.02(BZ#1026034)
 
 * Thu Oct 31 2013 Christopher Meng <rpm@cicku.me> - 2013.10.30-1
-- Update to new release(BZ#1024948).
+- Update to 2013.10.30(BZ#1024948)
 
 * Mon Oct 28 2013 Christopher Meng <rpm@cicku.me> - 2013.10.28-1
-- Update to new release(BZ#1022706).
+- Update to 2013.10.28(BZ#1022706)
 
 * Wed Oct 23 2013 Christopher Meng <rpm@cicku.me> - 2013.10.23-1
-- Update to new release.
+- Update to 2013.10.23
 
 * Sun Oct 20 2013 Christopher Meng <rpm@cicku.me> - 2013.10.18.2-1
-- Update to new release(BZ#1020787).
+- Update to 2013.10.18.2(BZ#1020787)
 
 * Thu Oct 17 2013 Christopher Meng <rpm@cicku.me> - 2013.10.17-1
-- Update to new release(BZ#1019694).
+- Update to 2013.10.17(BZ#1019694)
 
 * Thu Oct 10 2013 Christopher Meng <rpm@cicku.me> - 2013.10.09-1
-- Update to new release(BZ#1017630).
+- Update to 2013.10.09(BZ#1017630)
 
 * Mon Oct 07 2013 Christopher Meng <rpm@cicku.me> - 2013.10.07-1
-- Update to new release(BZ#1014266).
+- Update to 2013.10.07(BZ#1014266)
 
 * Mon Sep 30 2013 Christopher Meng <rpm@cicku.me> - 2013.09.29-1
-- Update to new release(BZ#1013394).
+- Update to 2013.09.29(BZ#1013394)
 
 * Wed Sep 25 2013 Christopher Meng <rpm@cicku.me> - 2013.09.24.2-1
-- Update to new release(BZ#1011845).
+- Update to 2013.09.24.2(BZ#1011845)
 
 * Sat Sep 21 2013 Christopher Meng <rpm@cicku.me> - 2013.09.20.1-1
-- Update to new release(BZ#1009593).
+- Update to 2013.09.20.1(BZ#1009593)
 
 * Mon Sep 16 2013 Christopher Meng <rpm@cicku.me> - 2013.09.16-1
-- Update to new release(BZ#1006829).
+- Update to 2013.09.16(BZ#1006829)
 
 * Wed Sep 11 2013 Christopher Meng <rpm@cicku.me> - 2013.09.10-1
-- Update to new release(BZ#1006334).
+- Update to 2013.09.10(BZ#1006334)
 
 * Mon Sep 09 2013 Christopher Meng <rpm@cicku.me> - 2013.09.07-1
-- Update to new release.
+- Update to 2013.09.07
 
 * Thu Sep 05 2013 Christopher Meng <rpm@cicku.me> - 2013.09.04-1
-- Update to new release.
+- Update to 2013.09.04
 
 * Mon Sep 02 2013 Christopher Meng <rpm@cicku.me> - 2013.08.30-1
-- Update to new release.
+- Update to 2013.08.30
 
 * Fri Aug 30 2013 Christopher Meng <rpm@cicku.me> - 2013.08.29-1
-- Update to new release.
+- Update to 2013.08.29
 
 * Tue Aug 27 2013 Christopher Meng <rpm@cicku.me> - 2013.08.27-1
-- Update to new release.
+- Update to 2013.08.27
 
 * Sat Aug 24 2013 Christopher Meng <rpm@cicku.me> - 2013.08.23-1
-- Update to new release.
+- Update to 2013.08.23
 
 * Sun Aug 18 2013 Christopher Meng <rpm@cicku.me> - 2013.08.17-1
-- Update to new release.
+- Update to 2013.08.17
 
 * Tue Aug 13 2013 Christopher Meng <rpm@cicku.me> - 2013.08.09-1
-- Update to new release.
+- Update to 2013.08.09
 
 * Sat Aug 03 2013 Christopher Meng <rpm@cicku.me> - 2013.08.02-1
-- Update to new release.
+- Update to 2013.08.02
 
 * Mon Jul 22 2013 Christopher Meng <rpm@cicku.me> - 2013.07.25.2-1
-- Update to new release.
+- Update to 2013.07.25.2
 
 * Mon Jul 22 2013 Christopher Meng <rpm@cicku.me> - 2013.07.19-1
-- Update to new release.
+- Update to 2013.07.19
 
 * Thu Jul 18 2013 Christopher Meng <rpm@cicku.me> - 2013.07.17.1-1
-- Update to new release.
+- Update to 2013.07.17.1
 
 * Tue Jul 16 2013 Christopher Meng <rpm@cicku.me> - 2013.07.12-1
-- Update to new release.
+- Update to 2013.07.12
 
 * Thu Jul 11 2013 Christopher Meng <rpm@cicku.me> - 2013.07.10-1
-- Update to new release.
+- Update to 2013.07.10
 
 * Tue Jul 02 2013 Christopher Meng <rpm@cicku.me> - 2013.07.02-1
-- Update to new release.
+- Update to 2013.07.02
 - SPEC cleanup.
 
 * Wed Jun 26 2013 Christopher Meng <rpm@cicku.me> - 2013.06.31-1
-- Update to new release.
+- Update to 2013.06.31
 
 * Mon Jun 17 2013 Christopher Meng <rpm@cicku.me> - 2013.05.23-1
-- Update to new release and cleanup the spec.
+- Update to 2013.05.23 and cleanup the spec
 
 * Tue May 14 2013 Christopher Meng <rpm@cicku.me> - 2013.05.14-1
-- Update to new release.
+- Update to 2013.05.14
 
 * Wed May 08 2013 Christopher Meng <rpm@cicku.me> - 2013.05.07-1
-- Update to new release.
+- Update to 2013.05.07
 
 * Thu Apr 18 2013 Till Maas <opensource@till.name> - 2013.04.18-1
 - Update to new release.
