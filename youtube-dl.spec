@@ -1,12 +1,12 @@
 Name:           youtube-dl
-Version:        2014.06.24.1
+Version:        2014.07.20.2
 Release:        1%{?dist}
 Summary:        A small command-line program to download online videos
 License:        Public Domain
 URL:            https://yt-dl.org
 Source0:        https://yt-dl.org/downloads/%{version}/%{name}-%{version}.tar.gz
 Source1:        %{name}.conf
-BuildRequires:  python
+BuildRequires:  python2
 # Tests failed because of no connection in Koji.
 # BuildRequires:  python-nose
 Requires:       python
@@ -22,10 +22,9 @@ Small command-line program to download videos from YouTube and other sites.
 make %{?_smp_mflags}
 
 %install
-make install DESTDIR=%{buildroot} \
-             PREFIX=%{_prefix} \
-             MANDIR=%{_mandir} \
-             PYTHON=%{__python2}
+%make_install PREFIX=%{_prefix} \
+              MANDIR=%{_mandir} \
+              PYTHON=%{__python2}
 mkdir -p %{buildroot}%{_sysconfdir}
 install -pm644 %{S:1} %{buildroot}%{_sysconfdir}
 
@@ -40,6 +39,12 @@ install -pm644 %{S:1} %{buildroot}%{_sysconfdir}
 %{_sysconfdir}/bash_completion.d/%{name}
 
 %changelog
+* Mon Jul 21 2014 Matěj Cepl <mcepl@redhat.com> - 2014.07.20.2-1
+- Update to 2014.07.20.2
+
+* Sat Jul 12 2014 Christopher Meng <rpm@cicku.me> - 2014.07.11.3-1
+- Update to 2014.07.11.3
+
 * Tue Jun 24 2014 Christopher Meng <rpm@cicku.me> - 2014.06.24.1-1
 - Update to 2014.06.24.1
 
