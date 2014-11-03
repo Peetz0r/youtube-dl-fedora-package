@@ -1,23 +1,26 @@
 Name:           youtube-dl
-Version:        2014.09.22.1
+Version:        2014.11.02.1
 Release:        1%{?dist}
 Summary:        A small command-line program to download online videos
 License:        Public Domain
 URL:            https://yt-dl.org
 Source0:        https://yt-dl.org/downloads/%{version}/%{name}-%{version}.tar.gz
-Source1:        %{name}.conf
-Source2:        https://yt-dl.org/downloads/%{version}/youtube-dl-%{version}.tar.gz.sig
-# 2014-09-07: Signature made by 7D33 D762 FD6C 3513 0481  347F DB4B 54CB A482 6A18
+Source1:        https://yt-dl.org/downloads/%{version}/youtube-dl-%{version}.tar.gz.sig
+Source2:        gpgkey-7D33D762FD6C35130481347FDB4B54CBA4826A18.gpg
+Source3:        %{name}.conf
 BuildRequires:  python2
 # Tests failed because of no connection in Koji.
 # BuildRequires:  python-nose
 Requires:       python
 BuildArch:      noarch
+# For source verification with gpgv
+BuildRequires:  gpg
 
 %description
 Small command-line program to download videos from YouTube and other sites.
 
 %prep
+gpgv --quiet --keyring %{SOURCE2} %{SOURCE1} %{SOURCE0}
 %setup -qn %{name}
 
 %build
@@ -28,7 +31,7 @@ make %{?_smp_mflags}
               MANDIR=%{_mandir} \
               PYTHON=%{__python2}
 mkdir -p %{buildroot}%{_sysconfdir}
-install -pm644 %{S:1} %{buildroot}%{_sysconfdir}
+install -pm644 %{S:3} %{buildroot}%{_sysconfdir}
 
 %check
 #make test
@@ -40,8 +43,14 @@ install -pm644 %{S:1} %{buildroot}%{_sysconfdir}
 %config(noreplace) %{_sysconfdir}/%{name}.conf
 %{_sysconfdir}/bash_completion.d/%{name}
 %exclude %{_sysconfdir}/fish/completions/youtube-dl.fish
+%{_datadir}/zsh/site-functions/_youtube-dl
 
 %changelog
+* Mon Nov 03 2014 Till Maas <opensource@till.name> - 2014.11.02.1-1
+- Update to latest release
+- Add zsh completion file
+- Add GPG key verification
+
 * Tue Sep 23 2014 Till Maas <opensource@till.name> - 2014.09.22.1-1
 - Update to latest release
 - Exclude fish completion script
