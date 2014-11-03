@@ -77,9 +77,6 @@ install -pm644 %{S:3} %{buildroot}%{_sysconfdir}
 * Mon Jun 09 2014 Christopher Meng <rpm@cicku.me> - 2014.06.07-1
 - Update to 2014.06.07
 
-* Sat Jun 07 2014 Fedora Release Engineering <rel-eng@lists.fedoraproject.org> - 2014.05.05-2
-- Rebuilt for https://fedoraproject.org/wiki/Fedora_21_Mass_Rebuild
-
 * Tue May 06 2014 Christopher Meng <rpm@cicku.me> - 2014.05.05-1
 - Update to 2014.05.05
 
