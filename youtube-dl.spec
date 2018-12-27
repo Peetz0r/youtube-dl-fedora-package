@@ -12,7 +12,7 @@
 %endif
 
 Name:           youtube-dl
-Version:        2018.12.09
+Version:        2018.12.17
 Release:        1%{?dist}
 Summary:        A small command-line program to download online videos
 License:        Unlicense
@@ -28,8 +28,10 @@ Source2:        youtube-dl-gpgkeys.gpg
 Source3:        %{name}.conf
 %if %{with python3}
 BuildRequires:  python%{python3_pkgversion}-devel
+BuildRequires:  python%{python3_pkgversion}-setuptools
 %else
 BuildRequires:  python2-devel
+BuildRequires:  python2-setuptools
 %endif
 # Tests failed because of no connection in Koji.
 # BuildRequires:  python-nose
@@ -116,6 +118,10 @@ install -pm644 youtube-dl.zsh %{buildroot}%{_datadir}/zsh/site-functions/_youtub
 
 
 %changelog
+* Thu Dec 27 2018 Matěj Cepl <mcepl@cepl.eu> - 2018.12.17-1
+- Update to the latest upstream release.
+- Make python-setuptools Required.
+
 * Sat Dec 15 2018 Matěj Cepl <mcepl@cepl.eu> - 2018.12.09-1
 - Update to the latest upstream release.
 
