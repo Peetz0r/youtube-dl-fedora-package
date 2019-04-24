@@ -12,8 +12,8 @@
 %endif
 
 Name:           youtube-dl
-Version:        2019.01.30
-Release:        2%{?dist}
+Version:        2019.04.24
+Release:        1%{?dist}
 Summary:        A small command-line program to download online videos
 License:        Unlicense
 URL:            https://yt-dl.org
@@ -118,6 +118,9 @@ install -pm644 youtube-dl.zsh %{buildroot}%{_datadir}/zsh/site-functions/_youtub
 
 
 %changelog
+* Wed Apr 24 2019 Till Maas <opensource@till.name> - 2019.04.24-1
+- Update to new upstream release with important bugfixes
+
 * Fri Mar 08 2019 Troy Dawson <tdawson@redhat.com> - 2019.01.30-2
 - Rebuilt to change main python from 3.4 to 3.6
 
