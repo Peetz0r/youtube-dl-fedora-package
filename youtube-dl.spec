@@ -12,8 +12,8 @@
 %endif
 
 Name:           youtube-dl
-Version:        2019.06.21
-Release:        1%{?dist}
+Version:        2019.09.12
+Release:        2%{?dist}
 Summary:        A small command-line program to download online videos
 License:        Unlicense
 URL:            https://yt-dl.org
@@ -29,9 +29,11 @@ Source3:        %{name}.conf
 %if %{with python3}
 BuildRequires:  python%{python3_pkgversion}-devel
 BuildRequires:  python%{python3_pkgversion}-setuptools
+Requires:       python%{python3_pkgversion}-setuptools
 %else
 BuildRequires:  python2-devel
 BuildRequires:  python2-setuptools
+Requires:  python2-setuptools
 %endif
 # Tests failed because of no connection in Koji.
 # BuildRequires:  python-nose
@@ -86,7 +88,8 @@ install -pm644 youtube-dl.bash-completion %{buildroot}%{_sysconfdir}/bash_comple
 %endif
 mkdir -p %{buildroot}%{_datadir}/zsh/site-functions/
 install -pm644 youtube-dl.zsh %{buildroot}%{_datadir}/zsh/site-functions/_youtube-dl
-
+mkdir -p %{buildroot}%{_datadir}/fish/vendor_functions.d
+install -pm644 youtube-dl.fish %{buildroot}%{_datadir}/fish/vendor_functions.d/youtube-dl.fish
 
 %check
 # This basically cannot work without massive .flake8rc
@@ -97,7 +100,7 @@ install -pm644 youtube-dl.zsh %{buildroot}%{_datadir}/zsh/site-functions/_youtub
 
 
 %files
-%doc README.md
+%doc AUTHORS ChangeLog README.md
 %if %{with python3}
 %{python3_sitelib}/youtube_dl/
 %{python3_sitelib}/youtube_dl*.egg-info
@@ -115,9 +118,24 @@ install -pm644 youtube-dl.zsh %{buildroot}%{_datadir}/zsh/site-functions/_youtub
 %{_sysconfdir}/bash_completion.d/%{name}
 %endif
 %{_datadir}/zsh/site-functions/_youtube-dl
-
+%{_datadir}/fish/vendor_functions.d/youtube-dl.fish
 
 %changelog
+* Wed Sep 11 2019 Robert-André Mauchin <zebob.m@gmail.com> - 2019.09.12-2
+- Add Fish shell completion
+
+* Wed Sep 11 2019 Robert-André Mauchin <zebob.m@gmail.com> - 2019.09.12-1
+- Update to 2019.09.12
+
+* Mon Aug 19 2019 Miro Hrončok <mhroncok@redhat.com> - 2019.07.30-2
+- Rebuilt for Python 3.8
+
+* Tue Jul 30 2019 Gwyn Ciesla <gwync@protonmail.com> - 2019.07.30-1
+- 2019.07.30
+
+* Sat Jul 27 2019 Fedora Release Engineering <releng@fedoraproject.org> - 2019.06.21-2
+- Rebuilt for https://fedoraproject.org/wiki/Fedora_31_Mass_Rebuild
+
 * Sun Jun 23 2019 Till Maas <opensource@till.name> - 2019.06.21-1
 - Update to new upstream release with important bugfixes
 
