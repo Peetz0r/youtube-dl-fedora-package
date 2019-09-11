@@ -12,8 +12,8 @@
 %endif
 
 Name:           youtube-dl
-Version:        2019.09.12
-Release:        2%{?dist}
+Version:        2019.09.12.1
+Release:        1%{?dist}
 Summary:        A small command-line program to download online videos
 License:        Unlicense
 URL:            https://yt-dl.org
@@ -121,6 +121,9 @@ install -pm644 youtube-dl.fish %{buildroot}%{_datadir}/fish/vendor_functions.d/y
 %{_datadir}/fish/vendor_functions.d/youtube-dl.fish
 
 %changelog
+* Wed Sep 11 2019 Robert-André Mauchin <zebob.m@gmail.com> - 2019.09.12.1-1
+- Update to 2019.09.12.1
+
 * Wed Sep 11 2019 Robert-André Mauchin <zebob.m@gmail.com> - 2019.09.12-2
 - Add Fish shell completion
 
