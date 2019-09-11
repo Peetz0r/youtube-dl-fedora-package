@@ -13,7 +13,7 @@
 
 Name:           youtube-dl
 Version:        2019.09.12
-Release:        1%{?dist}
+Release:        2%{?dist}
 Summary:        A small command-line program to download online videos
 License:        Unlicense
 URL:            https://yt-dl.org
@@ -88,7 +88,8 @@ install -pm644 youtube-dl.bash-completion %{buildroot}%{_sysconfdir}/bash_comple
 %endif
 mkdir -p %{buildroot}%{_datadir}/zsh/site-functions/
 install -pm644 youtube-dl.zsh %{buildroot}%{_datadir}/zsh/site-functions/_youtube-dl
-
+mkdir -p %{buildroot}%{_datadir}/fish/vendor_functions.d
+install -pm644 youtube-dl.fish %{buildroot}%{_datadir}/fish/vendor_functions.d/youtube-dl.fish
 
 %check
 # This basically cannot work without massive .flake8rc
@@ -99,7 +100,7 @@ install -pm644 youtube-dl.zsh %{buildroot}%{_datadir}/zsh/site-functions/_youtub
 
 
 %files
-%doc README.md
+%doc AUTHORS ChangeLog README.md
 %if %{with python3}
 %{python3_sitelib}/youtube_dl/
 %{python3_sitelib}/youtube_dl*.egg-info
@@ -117,9 +118,12 @@ install -pm644 youtube-dl.zsh %{buildroot}%{_datadir}/zsh/site-functions/_youtub
 %{_sysconfdir}/bash_completion.d/%{name}
 %endif
 %{_datadir}/zsh/site-functions/_youtube-dl
-
+%{_datadir}/fish/vendor_functions.d/youtube-dl.fish
 
 %changelog
+* Wed Sep 11 2019 Robert-André Mauchin <zebob.m@gmail.com> - 2019.09.12-2
+- Add Fish shell completion
+
 * Wed Sep 11 2019 Robert-André Mauchin <zebob.m@gmail.com> - 2019.09.12-1
 - Update to 2019.09.12
 
