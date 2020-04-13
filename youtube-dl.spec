@@ -12,7 +12,7 @@
 %endif
 
 Name:           youtube-dl
-Version:        2020.03.01
+Version:        2020.03.24
 Release:        1%{?dist}
 Summary:        A small command-line program to download online videos
 License:        Unlicense
@@ -121,6 +121,9 @@ install -pm644 youtube-dl.fish %{buildroot}%{_datadir}/fish/vendor_functions.d/y
 %{_datadir}/fish/vendor_functions.d/youtube-dl.fish
 
 %changelog
+* Mon Apr 13 2020 Robert-André Mauchin <zebob.m@gmail.com> - 2020.03.24-1
+- Update to 2020.03.24
+
 * Mon Mar 02 2020 Robert-André Mauchin <zebob.m@gmail.com> - 2020.03.01-1
 - Update to 2020.03.01
 
